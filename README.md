@@ -4,10 +4,10 @@ Build your JSON-LD in a markup style.
 
 ## Installation
 
-To get started, install `react-json-ld` using the commands bellow:
+To get started, install `@joaoalpalhao/react-json-ld` using the commands bellow:
 
 ```bash
-npm i react-json-ld # or yarn add react-json-ld
+npm i @joaoalpalhao/react-json-ld # or yarn add @joaoalpalhao/react-json-ld
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ import JsonLd, {
   JsonLdObject,
   JsonLdArray,
   JsonLdElement
-} from "react-json-ld";
+} from "@joaoalpalhao/react-json-ld";
 
 export function GraceHopper() {
   return (
