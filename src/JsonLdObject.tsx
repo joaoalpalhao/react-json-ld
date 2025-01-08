@@ -20,7 +20,7 @@ class JsonLdObject extends Component<JsonLdObjectProps> {
 }
 
 type JsonLdObjectProps = {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[] | null;
 }
 
 export default JsonLdObject;

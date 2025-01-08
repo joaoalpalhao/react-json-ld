@@ -17,9 +17,9 @@ export const isEmptyChildren = (children: any): boolean => {
 }
 
 /** @private Gets a children's JSON object */
-export const getChildrenJSON = (children: JSX.Element | JSX.Element[]): object => {
-  if (!children) return {};
-  if (isEmptyChildren(children)) return {};
+export const getChildrenJSON = (children: JSX.Element | JSX.Element[] | null
+): object => {
+  if (children === null || isEmptyChildren(children)) return {};
   const obj = {};
   React.Children.forEach(children, (child: JSX.Element) => {
     Object.assign(obj, getChildJSON(child));
@@ -29,7 +29,7 @@ export const getChildrenJSON = (children: JSX.Element | JSX.Element[]): object =
 
 /** @private Gets a child's JSON object */
 export const getChildJSON = (child: JSX.Element): object => {
-  if (!child) return {};
+  if (child === null) return {};
   const ChildClass = child.type;
   return Object.assign(new ChildClass(child.props).getJSON());
 }

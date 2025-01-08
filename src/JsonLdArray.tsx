@@ -11,7 +11,7 @@ class JsonLdArray extends Component<JsonLdArrayProps> {
 
   getJSON(): object[] {
     const { children } = this.props;
-    if (isEmptyChildren(children)) return [];
+    if (children === null || isEmptyChildren(children)) return [];
     return React.Children.map(children, (child: JSX.Element) => getChildJSON(child));
   }
 
@@ -21,7 +21,7 @@ class JsonLdArray extends Component<JsonLdArrayProps> {
 }
 
 type JsonLdArrayProps = {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[] | null;
 }
 
 export default JsonLdArray;

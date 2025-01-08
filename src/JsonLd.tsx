@@ -23,7 +23,7 @@ class JsonLd extends Component<JsonLdProps> {
 type JsonLdProps = {
   indentation?: number;
   context: string | number;
-  children: JSX.Element | JSX.Element[];
-}
+  children: JSX.Element | JSX.Element[] | null;
+};
 
 export default JsonLd;

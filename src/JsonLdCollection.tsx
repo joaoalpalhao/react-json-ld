@@ -11,7 +11,7 @@ class JsonLdCollection extends Component<JsonLdCollectionProps> {
 
   getJSON(): object {
     const { children, jsonKey } = this.props;
-    if (isEmptyChildren(children)) return {};
+    if (children === null || isEmptyChildren(children)) return {};
     return { [jsonKey]: getChildJSON(React.Children.only(children)) };
   }
 
@@ -22,7 +22,7 @@ class JsonLdCollection extends Component<JsonLdCollectionProps> {
 
 type JsonLdCollectionProps = {
   jsonKey: string | number;
-  children: JSX.Element;
+  children: JSX.Element | null;
 }
 
 export default JsonLdCollection;
