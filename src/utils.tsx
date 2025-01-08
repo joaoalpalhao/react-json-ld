@@ -4,7 +4,7 @@ import React from 'react';
 export const isAllowedChildren = (children: any, allowed: string[]): boolean => {
   let isAllowed: boolean = true;
   React.Children.forEach(children, (child: JSX.Element) => {
-    if (!allowed.includes(child.type.name)) {
+    if (child !== null && !allowed.includes(child.type.name)) {
       isAllowed = false;
     }
   });
