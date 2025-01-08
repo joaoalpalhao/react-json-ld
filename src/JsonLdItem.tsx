@@ -14,6 +14,6 @@ class JsonLdItem extends Component<JsonLdItemProps> {
 type JsonLdItemProps = {
   jsonKey: string | number;
   jsonValue: string | number;
-}
+};
 
 export default JsonLdItem;

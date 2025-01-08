@@ -6,7 +6,10 @@ class JsonLdCollection extends Component<JsonLdCollectionProps> {
   constructor(props: JsonLdCollectionProps) {
     super(props);
     const allowedChildren: string[] = ['JsonLdArray', 'JsonLdObject'];
-    invariant(isAllowedChildren(props.children, allowedChildren), `Invalid children. Only allowed ${JSON.stringify(allowedChildren)}.`);
+    invariant(
+      isAllowedChildren(props.children, allowedChildren),
+      `Invalid children. Only allowed ${JSON.stringify(allowedChildren)}.`
+    );
   }
 
   getJSON(): object {
@@ -23,6 +26,6 @@ class JsonLdCollection extends Component<JsonLdCollectionProps> {
 type JsonLdCollectionProps = {
   jsonKey: string | number;
   children: JSX.Element | null;
-}
+};
 
 export default JsonLdCollection;

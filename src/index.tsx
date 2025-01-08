@@ -5,6 +5,12 @@ import JsonLdObject from './JsonLdObject';
 import JsonLdElement from './JsonLdElement';
 import JsonLdCollection from './JsonLdCollection';
 
-export { JsonLdItem, JsonLdArray, JsonLdObject, JsonLdElement, JsonLdCollection };
+export {
+  JsonLdItem,
+  JsonLdArray,
+  JsonLdObject,
+  JsonLdElement,
+  JsonLdCollection,
+};
 
 export default JsonLd;
