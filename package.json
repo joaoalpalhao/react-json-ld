@@ -1,7 +1,7 @@
 {
   "name": "@joaoalpalhao/react-json-ld",
   "description": "A markup way to build your json ld scripts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "Apache-2.0",
   "author": "João Alpalhão",
   "repository": {
