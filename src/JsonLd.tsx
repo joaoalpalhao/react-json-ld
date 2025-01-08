@@ -5,8 +5,16 @@ import invariant from 'tiny-warning';
 class JsonLd extends Component<JsonLdProps> {
   constructor(props: JsonLdProps) {
     super(props);
-    const allowedChildren: string[] = ['JsonLdItem', 'JsonLdCollection', 'JsonLdArray', 'JsonLdObject'];
-    invariant(isAllowedChildren(props.children, allowedChildren), `Invalid children. Only allowed ${JSON.stringify(allowedChildren)}.`);
+    const allowedChildren: string[] = [
+      'JsonLdItem',
+      'JsonLdCollection',
+      'JsonLdArray',
+      'JsonLdObject',
+    ];
+    invariant(
+      isAllowedChildren(props.children, allowedChildren),
+      `Invalid children. Only allowed ${JSON.stringify(allowedChildren)}.`
+    );
   }
 
   render(): JSX.Element {
@@ -23,7 +31,7 @@ class JsonLd extends Component<JsonLdProps> {
 type JsonLdProps = {
   indentation?: number;
   context: string | number;
-  children: JSX.Element | JSX.Element[];
-}
+  children: JSX.Element | JSX.Element[] | null;
+};
 
 export default JsonLd;

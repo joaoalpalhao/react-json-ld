@@ -13,6 +13,6 @@ class JsonLdElement extends Component<JsonLdElementProps> {
 
 type JsonLdElementProps = {
   jsonValue: string | number;
-}
+};
 
 export default JsonLdElement;

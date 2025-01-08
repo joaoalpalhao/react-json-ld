@@ -5,8 +5,16 @@ import invariant from 'tiny-warning';
 class JsonLdObject extends Component<JsonLdObjectProps> {
   constructor(props: JsonLdObjectProps) {
     super(props);
-    const allowedChildren: string[] = ['JsonLdItem', 'JsonLdCollection', 'JsonLdArray', 'JsonLdObject'];
-    invariant(isAllowedChildren(props.children, allowedChildren), `Invalid children. Only allowed ${JSON.stringify(allowedChildren)}.`);
+    const allowedChildren: string[] = [
+      'JsonLdItem',
+      'JsonLdCollection',
+      'JsonLdArray',
+      'JsonLdObject',
+    ];
+    invariant(
+      isAllowedChildren(props.children, allowedChildren),
+      `Invalid children. Only allowed ${JSON.stringify(allowedChildren)}.`
+    );
   }
 
   getJSON(): object {
@@ -20,7 +28,7 @@ class JsonLdObject extends Component<JsonLdObjectProps> {
 }
 
 type JsonLdObjectProps = {
-  children: JSX.Element | JSX.Element[];
-}
+  children: JSX.Element | JSX.Element[] | null;
+};
 
 export default JsonLdObject;
